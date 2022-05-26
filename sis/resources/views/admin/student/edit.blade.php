@@ -27,7 +27,7 @@
                             <div class="col-sm-9">
 
                                 <div>
-                                    <button type="submit" class="btn btn-primary w-md">Update Category</button>
+                                    <button type="submit" class="btn btn-primary w-md">Update Student</button>
                                 </div>
                             </div>
                         </div>
@@ -37,6 +37,5 @@
         </div>
     </div>
 @endsection
-
 
 

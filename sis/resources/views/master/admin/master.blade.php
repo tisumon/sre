@@ -322,7 +322,7 @@
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
                             <li><a href="{{route('student.add')}}">Add Student</a></li>
-                            <li><a href="">Manage Student</a></li>
+                            <li><a href="{{route('student.manage')}}">Manage Student</a></li>
                             <li><a href="">Student Result Add</a></li>
 
                         </ul>
