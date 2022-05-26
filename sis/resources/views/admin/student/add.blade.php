@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <h4 class="card-title mb-4">Add Category form</h4>
                     <h3 class="text-center text-success">{{Session::get('message')}}</h3>
-                    <form action="" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('student.new')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row mb-4">
                             <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Name</label>
