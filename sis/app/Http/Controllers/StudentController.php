@@ -27,12 +27,12 @@ class StudentController extends Controller
     }
     public function edit($id)
     {
-        $this->student = Category::find($id);
+        $this->student = Student::find($id);
         return view('admin.student.edit', ['student'=>$this->student]);
     }
     public function update(Request $request, $id)
     {
-        Student::updateCategory($request, $id);
+        Student::updateStudent($request, $id);
         return redirect('/manage-student')->with('message', 'Student info updated successfully');
     }
     public function delete($id)

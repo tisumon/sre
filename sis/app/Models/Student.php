@@ -48,7 +48,6 @@ class Student extends Model
         }
 
         self::$student->name           = $request->name;
-        self::$student->description    = $request->description;
         self::$student->image          = self::$imageUrl;
         self::$student->save();
     }

@@ -14,9 +14,9 @@
                             <thead>
                             <tr>
                                 <th>SL NO</th>
+                                <th>Student ID</th>
                                 <th>Image</th>
-                                <th>Category Name</th>
-                                <th>Total</th>
+                                <th>Student Name</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -24,13 +24,16 @@
                             @foreach($students as $student)
                                 <tr>
                                     <th scope="row">{{$loop->iteration}}</th>
+                                    <td>{{$student->id}}</td>
                                     <td>
                                         <img src="{{asset($student->image)}}" alt="" height="50" width="50"/>
                                     </td>
                                     <td>{{$student->name}}</td>
-                                    <td>{{$student->total}}</td>
                                     <td>
-                                        <a href="{{route('student.edit', ['id'=>$student->id])}}" class="btn btn-success btn-sm">
+                                        <a href="{{route('student.view', ['id'=>$student->id])}}" class="btn btn-success btn-sm">
+                                            <i class="fa fa-book-open"></i>
+                                        </a>
+                                        <a href="{{route('student.edit', ['id'=>$student->id])}}" class="btn btn-warning btn-sm">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <a href="{{route('student.delete', ['id'=>$student->id])}}" class="btn btn-danger btn-sm">
