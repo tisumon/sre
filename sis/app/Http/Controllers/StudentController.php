@@ -22,7 +22,7 @@ class StudentController extends Controller
     }
     public function create(Request $request)
     {
-        Student::newCategory($request);
+        Student::newStudent($request);
         return redirect()->back()->with('message','Student info create successfully');
     }
     public function edit($id)
@@ -40,7 +40,7 @@ class StudentController extends Controller
         $this->student = Student::find($id);
         $this->student->delete();
 
-        return redirect('/manage-student')->with('message', 'Student deleted successfully');
+        return redirect('/manage-student')->with('message', 'Student Deleted successfully');
     }
 
 }

@@ -23,23 +23,21 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($results as $result)
+                        @foreach($results as $key=>$result)
                         <tr>
                             <td>{{$loop->iteration}}</td>
+                            <td><img src="{{$result['image']}}" alt="" height="50" width="50"></td>
+                            <td>{{$result['student_id']}}</td>
+                            <td>{{$result['name']}}</td>
+                            <td>{{$result['achieve_number']}}</td>
                             <td>
-                                <img src="{{asset($result->image)}}" alt="" height="50" width="50"/>
-                            </td>
-                            <td>{{$result->id}}</td>
-                            <td>{{$result->students}}</td>
-                            <td>{{$result->achieve_number}}</td>
-                            <td>
-                                <a href="{{route('result.view', ['id'=>$result->id])}}" class="btn btn-success btn-sm">
+                                <a href="{{route('result.detail', ['id'=>$result['id']])}}" class="btn btn-success btn-sm">
                                     <i class="fa fa-book-open"></i>
                                 </a>
-                                <a href="{{route('result.edit', ['id'=>$result->id])}}" class="btn btn-warning btn-sm">
+                                <a href="{{route('result.edit', ['id'=>$result['id']])}}" class="btn btn-warning btn-sm">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a href="{{route('result.delete', ['id'=>$result->id])}}" class="btn btn-danger btn-sm">
+                                <a href="{{route('result.delete', ['id'=>$result['id']])}}" class="btn btn-danger btn-sm">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>

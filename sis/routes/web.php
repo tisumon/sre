@@ -32,9 +32,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/delete-student/{id}', [StudentController::class, 'delete'])->name('student.delete');
 
     Route::get('/add-result', [ResultController::class,'index'])->name('result.add');
+	Route::post('/save-result', [ResultController::class,'create'])->name('result.save');
     Route::get('/manage-result', [ResultController::class,'manage'])->name('result.manage');
     Route::get('/edit-result/{id}', [ResultController::class,'edit'])->name('result.edit');
-    Route::get('/view-result/{id}', [ResultController::class,'view'])->name('result.view');
+    Route::get('/detail-result/{id}', [ResultController::class,'detail'])->name('result.detail');
     Route::post('/update-result/{id}', [ResultController::class,'update'])->name('result.update');
     Route::get('/delete-result/{id}', [ResultController::class,'delete'])->name('result.delete');
+
 });

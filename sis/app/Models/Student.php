@@ -24,7 +24,7 @@ class Student extends Model
         return self::$imageUrl;
     }
 
-    public static function newCategory($request)
+    public static function newStudent($request)
     {
         self::$student              = new Student();
         self::$student->name        = $request->name;
